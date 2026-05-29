@@ -29,3 +29,6 @@ func _physics_process(delta: float) -> void:
 	
 func bounce():
 	velocity.y = 8.0
+
+func die():
+	GameManager.restart_level()

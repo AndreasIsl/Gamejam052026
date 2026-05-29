@@ -38,10 +38,14 @@ func _physics_process(delta):
 
 
 func _on_head_area_body_entered(body: Node3D) -> void:
-	print(body.name)
+	print("HeadArea: %s" % body.name)
 	if body.is_in_group("Player"):
-		print('Body is in Group')
 		if body.global_position.y > global_position.y:
-			print('should work')
 			body.bounce()
 			queue_free()
+
+
+func _on_hitbox_body_entered(body: Node3D) -> void:
+	print("Hitbox: %s" % body.name)
+	if body.is_in_group("Player"):
+		body.die()

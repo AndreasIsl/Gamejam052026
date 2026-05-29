@@ -11,17 +11,19 @@ config_version=5
 [application]
 
 config/name="Gamejam052026"
-run/main_scene="uid://il52e34kredp"
+run/main_scene="uid://bshjcjubbwpgy"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MainConfig="*uid://dseudgyw3gc11"
+GameManager="*uid://bc6ec41vsv6t2"
 
 [global_group]
 
 Player=""
+Enemies=""
 
 [physics]
 
