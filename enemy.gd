@@ -1,13 +1,39 @@
 extends CharacterBody3D
 
+var speed = MainConfig.enemy_speed
+var gravity = MainConfig.enemy_gravity
+
+@export var patrol_distance = MainConfig.patrol_distance
 
 
+var direction := 1
+var start_x := 0.0
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
+@onready var sprite: Sprite3D = $Sprite3D
+
+
+func _ready():
+	start_x = global_position.x
+
+func _physics_process(delta):
+	# Gravitation
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity.y -= gravity * delta
+	else:
+		velocity.y = 0
 
+	# Links/rechts laufen
+	velocity.x = direction * speed
+	velocity.z = 0
+
+	# Wenn zu weit rechts/links, Richtung wechseln
+	if global_position.x > start_x + patrol_distance:
+		direction = -1
+	elif global_position.x < start_x - patrol_distance:
+		direction = 1
+
+	# Sprite spiegeln
+	sprite.flip_h = direction < 0
 
 	move_and_slide()
 
