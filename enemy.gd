@@ -2,7 +2,6 @@ extends CharacterBody3D
 
 var speed = MainConfig.enemy_speed
 var gravity = MainConfig.enemy_gravity
-
 @export var patrol_distance = MainConfig.patrol_distance
 
 
