@@ -1,19 +1,22 @@
 [gd_scene format=3 uid="uid://c8nxtiirxayya"]
 
 [ext_resource type="Script" uid="uid://cogihklfckli0" path="res://Scenes/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://bethbanem8j7w" path="res://Assets/placeholder/craftpix-net-563568-free-wraith-tiny-style-2d-sprites/PNG/Wraith_01/PNG Sequences/Idle/Wraith_01_Idle_000.png" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://djx8oid53pllo" path="res://Assets/placeholder/Proto-Sprite.png" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
 
-[node name="Player" type="CharacterBody3D" unique_id=983142921]
+[node name="Player" type="CharacterBody3D" unique_id=983142921 groups=["Player"]]
 script = ExtResource("1_cvnsp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1383901361]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_cvnsp")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1887803930]
 billboard = 1
-texture = ExtResource("1_v0iea")
+texture_filter = 0
+texture = ExtResource("2_cvnsp")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=957931789]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 6, 8)
+transform = Transform3D(1, 0, 0, 0, 0.7880108, 0.6156615, 0, -0.6156615, 0.7880108, 0, 1, 1)
+far = 74.84
