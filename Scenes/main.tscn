@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://il52e34kredp"]
+
+[ext_resource type="PackedScene" uid="uid://c8nxtiirxayya" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://bhhwrgwjdufa4" path="res://Scenes/level_one_body.tscn" id="2_bo1nx"]
+
+[node name="LevelOne" type="Node3D" unique_id=1517544317]
+
+[node name="Player" parent="." unique_id=983142921 instance=ExtResource("1_jjgbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1046824262]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=210183385]
+
+[node name="LevelOneBody" parent="." unique_id=1205522974 instance=ExtResource("2_bo1nx")]
