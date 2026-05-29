@@ -1,57 +1,13 @@
 [gd_scene format=3 uid="uid://bhhwrgwjdufa4"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_bo1nx"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_8gbba"]
+[ext_resource type="MeshLibrary" uid="uid://b7cgvv8ukor7s" path="res://Assets/MeshLib/Block1.meshlib" id="1_gl0hn"]
 
 [node name="LevelOneBody" type="Node3D" unique_id=800788273]
 
-[node name="Floor" type="StaticBody3D" parent="." unique_id=2006499859]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=703344037]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-mesh = SubResource("BoxMesh_bo1nx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=365191065]
-shape = SubResource("BoxShape3D_8gbba")
-
-[node name="Wall" type="StaticBody3D" parent="." unique_id=952313065]
-transform = Transform3D(20, 0, 0, 0, 11, 0, 0, 0, 1, 0, 5, 10.5)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall" unique_id=647039391]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-mesh = SubResource("BoxMesh_bo1nx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall" unique_id=649055930]
-shape = SubResource("BoxShape3D_8gbba")
-
-[node name="Wall2" type="StaticBody3D" parent="." unique_id=1397533016]
-transform = Transform3D(20, 0, 0, 0, 11, 0, 0, 0, 1, 0, 5, -10.5)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2" unique_id=1372000983]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-mesh = SubResource("BoxMesh_bo1nx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2" unique_id=1708172189]
-shape = SubResource("BoxShape3D_8gbba")
-
-[node name="Wall3" type="StaticBody3D" parent="." unique_id=967437645]
-transform = Transform3D(-9.616506e-07, 0, 1, 0, 11, 0, -22, 0, -4.371139e-08, 10.5, 5, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall3" unique_id=48227422]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-mesh = SubResource("BoxMesh_bo1nx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3" unique_id=464932806]
-shape = SubResource("BoxShape3D_8gbba")
-
-[node name="Wall4" type="StaticBody3D" parent="." unique_id=488895275]
-transform = Transform3D(-9.616506e-07, 0, 1, 0, 11, 0, -22, 0, -4.371139e-08, -10, 5, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall4" unique_id=64920561]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-mesh = SubResource("BoxMesh_bo1nx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4" unique_id=738669205]
-shape = SubResource("BoxShape3D_8gbba")
+[node name="GridMap" type="GridMap" parent="." unique_id=1989569054]
+mesh_library = ExtResource("1_gl0hn")
+cell_size = Vector3(1, 1, 1)
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65535, 65533, 0, 65535, 65534, 0, 65535, 65535, 0, 65535, 0, 0, 65535, 1, 0, 65535, 2, 0, 65535, 3, 0)
+}
