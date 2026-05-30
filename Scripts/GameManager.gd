@@ -1,6 +1,6 @@
 extends Node
 var levels := [
-	"res://Scenes/Levels/LevelZero/level_Zero.tscn",
+	#"res://Scenes/Levels/LevelZero/level_Zero.tscn",
 	"res://Scenes/Levels/LevelOne/level_one.tscn",
 ]
 
@@ -11,18 +11,18 @@ var can_check_enemies := false
 
 func start_enemy_check():
 	can_check_enemies = false
-
-	
 	await get_tree().create_timer(1).timeout
-
 	can_check_enemies = true
+
 
 func restart_level():
 	can_check_enemies = false
 	call_deferred("_restart_level_deferred")
 
+
 func _restart_level_deferred():
 	get_tree().change_scene_to_file(levels[current_level])
+
 
 func next_level():
 	if current_level >= levels.size():

@@ -9,5 +9,5 @@ var player_bounce_velocity = 3
 
 #Enemy settings
 var enemy_speed = 2.0
-var patrol_distance = 2.0
+var patrol_distance = 1.0
 var enemy_gravity = 20
