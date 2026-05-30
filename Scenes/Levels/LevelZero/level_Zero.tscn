@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bshjcjubbwpgy"]
 
 [ext_resource type="PackedScene" uid="uid://c8nxtiirxayya" path="res://Scenes/player.tscn" id="1_fj12h"]
+[ext_resource type="Script" uid="uid://d1cjowul5p4d3" path="res://Scenes/Levels/LevelZero/level_zero.gd" id="1_gghvb"]
 [ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/enemy.tscn" id="3_3upf7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dyf6n"]
@@ -8,6 +9,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_gghvb"]
 
 [node name="LevelZero" type="Node3D" unique_id=1517544317]
+script = ExtResource("1_gghvb")
 
 [node name="Player" parent="." unique_id=983142921 instance=ExtResource("1_fj12h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -28,3 +30,6 @@ mesh = SubResource("BoxMesh_dyf6n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1401974199]
 shape = SubResource("BoxShape3D_gghvb")
+
+[node name="Enemy2" parent="." unique_id=2121351763 instance=ExtResource("3_3upf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6648649, 1.2741152, -1.7175024)

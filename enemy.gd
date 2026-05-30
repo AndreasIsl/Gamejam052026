@@ -37,15 +37,18 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_head_area_body_entered(body: Node3D) -> void:
-	print("HeadArea: %s" % body.name)
-	if body.is_in_group("Player"):
-		if body.global_position.y > global_position.y:
-			body.bounce()
-			queue_free()
-
-
 func _on_hitbox_body_entered(body: Node3D) -> void:
 	print("Hitbox: %s" % body.name)
 	if body.is_in_group("Player"):
 		body.die()
+
+
+func _on_head_area_area_entered(area: Area3D) -> void:
+	if area.is_in_group("PlayerFeet"):
+		print("HeadArea: %s" % area.name)
+		var player = area.get_parent()
+
+		if player.has_method("bounce"):
+			player.bounce()
+
+		call_deferred("queue_free")

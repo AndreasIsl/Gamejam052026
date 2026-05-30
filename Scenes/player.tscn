@@ -5,11 +5,13 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cvnsp"]
+
 [node name="Player" type="CharacterBody3D" unique_id=983142921 groups=["Player"]]
 script = ExtResource("1_cvnsp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1383901361]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_cvnsp")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1887803930]
@@ -20,3 +22,10 @@ texture = ExtResource("2_cvnsp")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=957931789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 far = 74.84
+
+[node name="FeetBox" type="Area3D" parent="." unique_id=869323508 groups=["PlayerFeet"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FeetBox" unique_id=927897504]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.06, 0)
+shape = SubResource("CylinderShape3D_cvnsp")
+debug_color = Color(0.9403242, 1.0781288e-05, 0.617683, 0.41960785)
