@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b5q86u1i81imh"]
+
+[ext_resource type="Script" uid="uid://ceg2bakt5qjpk" path="res://Scripts/level_one.gd" id="1_dbmyc"]
+[ext_resource type="PackedScene" uid="uid://cm1f34m8daoo6" path="res://Scenes/deathzone.tscn" id="2_yxqb4"]
+[ext_resource type="PackedScene" uid="uid://bl3tbki8bbqet" path="res://Scenes/Items/Pickups/KeyItem.tscn" id="3_85wss"]
+[ext_resource type="PackedScene" uid="uid://c8nxtiirxayya" path="res://Scenes/player.tscn" id="4_rcifb"]
+[ext_resource type="PackedScene" uid="uid://cpl8fsfwf7iy6" path="res://Scenes/blockade.tscn" id="5_6cj4q"]
+[ext_resource type="PackedScene" uid="uid://bft7r22avdlin" path="res://Scenes/image_frame.tscn" id="6_fpimv"]
+[ext_resource type="PackedScene" uid="uid://bca2eo0m12lnd" path="res://Scenes/UI/user_interface_game.tscn" id="7_7s1f8"]
+[ext_resource type="PackedScene" uid="uid://hvwxhdn1k7an" path="res://Scenes/goal_post.tscn" id="8_43a3e"]
+[ext_resource type="PackedScene" uid="uid://bawlyabj0jfq8" path="res://Scenes/Items/collectible.tscn" id="9_ntuhg"]
+[ext_resource type="PackedScene" uid="uid://kwa3rjg4l7yp" path="res://Scenes/enemies/rohrbert_standing.tscn" id="11_ckpdm"]
+[ext_resource type="PackedScene" uid="uid://cari11puhmdvs" path="res://Scenes/Levels/LevelTwo/level_two_body.tscn" id="12_3tbbl"]
+[ext_resource type="PackedScene" uid="uid://dhabnlhxjoy8" path="res://Scenes/enemies/rohrbert_running.tscn" id="12_ualqu"]
+
+[node name="LevelTwo" type="Node3D" unique_id=1517544317]
+script = ExtResource("1_dbmyc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1046824262]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=65046320]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="Deathzones" type="Node3D" parent="." unique_id=1311531475]
+
+[node name="Deathzone2" parent="Deathzones" unique_id=1918166789 instance=ExtResource("2_yxqb4")]
+transform = Transform3D(347.845, 0, 0, 0, 47.2, 0, 0, 0, 40, 4.7169065, 0.5122475, -0.022827148)
+
+[node name="Deathzone_ground" parent="Deathzones" unique_id=655910940 instance=ExtResource("2_yxqb4")]
+transform = Transform3D(500, 0, 0, 0, 42.955, 0, 0, 0, 53.685, 10.579, -4.063464, 0)
+
+[node name="KeyItemBody" parent="." unique_id=1018504437 instance=ExtResource("3_85wss")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.27707, -2.0297303, 0)
+
+[node name="Player" parent="." unique_id=983142921 instance=ExtResource("4_rcifb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0090752, 1.246615, 0)
+
+[node name="Blockade" parent="." unique_id=50277083 instance=ExtResource("5_6cj4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.782727, 2.8687396, 0)
+
+[node name="ImageFrame" parent="." unique_id=729793581 instance=ExtResource("6_fpimv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.127014, 1.6039891, 0)
+key_id = "1"
+
+[node name="UserInterfaceGame" parent="." unique_id=1619552436 instance=ExtResource("7_7s1f8")]
+
+[node name="GoalPost" parent="." unique_id=960934025 instance=ExtResource("8_43a3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.183874, 1.6066347, 0)
+
+[node name="Collectibles" type="Node3D" parent="." unique_id=603745295]
+
+[node name="Collectible" parent="Collectibles" unique_id=546603708 instance=ExtResource("9_ntuhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2003574, 5.64068, 0)
+
+[node name="Collectible2" parent="Collectibles" unique_id=1376641800 instance=ExtResource("9_ntuhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.707308, 3.2000601, 0)
+
+[node name="Collectible3" parent="Collectibles" unique_id=1817598744 instance=ExtResource("9_ntuhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.204312, -0.1602273, 0)
+
+[node name="RohrbertStanding2" parent="." unique_id=1021150881 instance=ExtResource("11_ckpdm")]
+transform = Transform3D(-1.9985312, 0, -0.07663597, 0, 2, 0, 0.07663597, 0, -1.9985312, 5.637111, 1.7636223, 1.1920929e-07)
+
+[node name="RohrbertStanding3" parent="." unique_id=1685054086 instance=ExtResource("11_ckpdm")]
+transform = Transform3D(-1.9985312, 0, -0.07663597, 0, 2, 0, 0.07663597, 0, -1.9985312, 2.0095284, 1.254488, 1.1920929e-07)
+
+[node name="RohrbertStanding4" parent="." unique_id=545974091 instance=ExtResource("11_ckpdm")]
+transform = Transform3D(-2.4102898, 0, -3.2815964, 0, 4.1460524, 0, 4.919795, 0, -1.6077089, 17.995632, -6.44631, 1.1920929e-07)
+
+[node name="RohrbertRunning" parent="." unique_id=710838581 instance=ExtResource("12_ualqu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 11.06546, -2.233234, 0)
+patrol_distance = 0.5
+
+[node name="LevelTwoBody" parent="." unique_id=800788273 instance=ExtResource("12_3tbbl")]

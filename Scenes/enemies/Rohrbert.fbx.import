@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dk0dqesdeuicm"
-path="res://.godot/imported/Rohrbert.fbx-413d4c6702b1ee932be40c64bb5cd2c6.scn"
+path="res://.godot/imported/Rohrbert.fbx-517519d1960d601fa87932443d1e322e.scn"
 
 [deps]
 
-source_file="res://Scenes/Enemies/Rohrbert.fbx"
-dest_files=["res://.godot/imported/Rohrbert.fbx-413d4c6702b1ee932be40c64bb5cd2c6.scn"]
+source_file="res://Scenes/enemies/Rohrbert.fbx"
+dest_files=["res://.godot/imported/Rohrbert.fbx-517519d1960d601fa87932443d1e322e.scn"]
 
 [params]
 
