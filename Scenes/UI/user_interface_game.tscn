@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bca2eo0m12lnd"]
+
+[ext_resource type="Script" uid="uid://5ocuve7grd3j" path="res://Scripts/canvas_layer.gd" id="1_thbqy"]
+[ext_resource type="PackedScene" uid="uid://by6xkolimub24" path="res://Scenes/UI/collectibles.tscn" id="2_3h16a"]
+
+[node name="UserInterfaceGame" type="Control" unique_id=1619552436]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1543115319]
+script = ExtResource("1_thbqy")
+
+[node name="Collectibles" parent="CanvasLayer" unique_id=1428016820 instance=ExtResource("2_3h16a")]

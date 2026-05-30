@@ -25,7 +25,6 @@ GameManager="*uid://bc6ec41vsv6t2"
 Player=""
 Enemies=""
 PlayerFeet=""
-Blockades=""
 
 [input]
 

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bawlyabj0jfq8"]
+
+[ext_resource type="Script" uid="uid://i3v2vufxg2dh" path="res://Scripts/collectible.gd" id="1_dxsup"]
+[ext_resource type="Texture2D" uid="uid://c88wcvv6haxlt" path="res://Assets/placeholder/craftpix-net-563568-free-wraith-tiny-style-2d-sprites/PNG/Wraith_03/Vector Parts/Spells-Effect.png" id="1_jt0mt"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ut0nb"]
+
+[node name="Collectible" type="Area3D" unique_id=546603708]
+script = ExtResource("1_dxsup")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=260103386]
+shape = SubResource("SphereShape3D_ut0nb")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1664743606]
+texture = ExtResource("1_jt0mt")
+
+[connection signal="body_entered" from="." to="." method="_on_detection_area_body_entered"]
