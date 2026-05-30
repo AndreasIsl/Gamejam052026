@@ -1,9 +1,61 @@
 [gd_scene format=3 uid="uid://bawlyabj0jfq8"]
 
 [ext_resource type="Script" uid="uid://i3v2vufxg2dh" path="res://Scripts/collectible.gd" id="1_dxsup"]
-[ext_resource type="Texture2D" uid="uid://c88wcvv6haxlt" path="res://Assets/placeholder/craftpix-net-563568-free-wraith-tiny-style-2d-sprites/PNG/Wraith_03/Vector Parts/Spells-Effect.png" id="1_jt0mt"]
+[ext_resource type="Texture2D" uid="uid://ci10wh1w72yfr" path="res://Assets/Sprite/Paint_Brush.png" id="2_dxsup"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ut0nb"]
+
+[sub_resource type="Animation" id="Animation_ut0nb"]
+resource_name = "Hover"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2, 3.06, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 15), Vector2(0, 0), Vector2(0, 16), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nwh8b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3g1bn"]
+_data = {
+&"Hover": SubResource("Animation_ut0nb"),
+&"RESET": SubResource("Animation_nwh8b")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxsup"]
+albedo_color = Color(1, 1, 0.2509804, 1)
+metallic = 0.63
+metallic_specular = 1.0
+roughness = 0.03
+
+[sub_resource type="BoxMesh" id="BoxMesh_ut0nb"]
+material = SubResource("StandardMaterial3D_dxsup")
+size = Vector3(0.07, 0.07, 0.07)
+
+[sub_resource type="Curve" id="Curve_nwh8b"]
+_data = [Vector2(0.006, 1), 0.0, 0.0, 0, 0, Vector2(0.53246754, 0.64838463), -2.2011685, -2.2011685, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [node name="Collectible" type="Area3D" unique_id=546603708]
 script = ExtResource("1_dxsup")
@@ -12,6 +64,32 @@ script = ExtResource("1_dxsup")
 shape = SubResource("SphereShape3D_ut0nb")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1664743606]
-texture = ExtResource("1_jt0mt")
+texture = ExtResource("2_dxsup")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3D" unique_id=1034934591]
+libraries/ = SubResource("AnimationLibrary_3g1bn")
+autoplay = &"Hover"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sprite3D" unique_id=1304328993]
+light_color = Color(0.9433449, 0.8596292, 0, 1)
+light_energy = 2.598
+light_indirect_energy = 1.295
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Sprite3D" unique_id=600918290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+amount = 30
+lifetime = 1.47
+explosiveness = 0.08
+mesh = SubResource("BoxMesh_ut0nb")
+emission_shape = 2
+emission_sphere_radius = 0.3
+direction = Vector3(0, 1, 0)
+spread = 31.21
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.1
+initial_velocity_max = 0.3
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_nwh8b")
+color = Color(1, 1, 0.07450981, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_detection_area_body_entered"]
