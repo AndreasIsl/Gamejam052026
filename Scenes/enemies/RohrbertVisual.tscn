@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://ck3kqrvclthtb"]
 
-[ext_resource type="PackedScene" uid="uid://bp5sawhag2ais" path="res://Assets/Enemies/Gegner.fbx" id="1_swt3i"]
+[ext_resource type="PackedScene" uid="uid://bn5qpfmfhjfqv" path="res://Assets/Enemies/Rohrbert.fbx" id="1_5awcp"]
 
-[node name="Gegner" unique_id=1682375056 instance=ExtResource("1_swt3i")]
+[node name="RohrbertVisual" unique_id=1374439153 instance=ExtResource("1_5awcp")]
+transform = Transform3D(-0.9396926, 0, -0.34202015, 0, 1, 0, 0.34202015, 0, -0.9396926, 0, 0, 0)
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(181037048) index="0" unique_id=318806215]
-bones/0/rotation = Quaternion(0.4936979, 0.50622374, -0.50622255, 0.49369898)
-bones/1/rotation = Quaternion(-0.22068098, 0.21522096, 0.68104595, 0.66419595)
-bones/10/rotation = Quaternion(-0.15453558, -0.6900137, 0.17177027, 0.6859263)
-bones/12/position = Vector3(5.1934036e-05, 0.00018415716, 0.005065727)
-bones/12/rotation = Quaternion(0.0061735115, -0.7070798, 0.011538989, 0.70701265)
+[node name="Armature" parent="." index="0" unique_id=615474782]
+transform = Transform3D(9.369713, 0, 0, 0, -4.0956314e-07, 9.369713, 0, -9.369713, -4.0956314e-07, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0" unique_id=499170894]
+bones/0/rotation = Quaternion(0.5062243, -0.49369738, -0.4936996, -0.5062219)
+bones/1/position = Vector3(-0.004401526, 0.001872372, -4.43854e-11)
+bones/1/rotation = Quaternion(0.22068092, -0.21522105, 0.68104595, 0.66419595)
+bones/10/position = Vector3(5.1934618e-05, 0.00018415716, -0.005065726)
+bones/10/rotation = Quaternion(0.011538989, -0.70701265, 0.0061735106, 0.7070798)
+bones/12/position = Vector3(0.000113161055, -0.0022595213, 0.005065728)
+bones/12/rotation = Quaternion(0.1717702, -0.68592644, -0.15453568, 0.6900136)

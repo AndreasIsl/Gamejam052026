@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cao8ejt4cd8y4"]
 
 [ext_resource type="Script" uid="uid://dmsbc0qk0f0k8" path="res://Scripts/enemy.gd" id="1_1f0kj"]
-[ext_resource type="Texture2D" uid="uid://dsv3tr853yct2" path="res://Assets/placeholder/craftpix-net-563568-free-wraith-tiny-style-2d-sprites/PNG/Wraith_02/PNG Sequences/Dying/Wraith_02_Dying_002.png" id="2_afpow"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_287tu"]
 height = 1.5380859
@@ -12,11 +11,6 @@ height = 1.5380859
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1021150881 groups=["Enemies"]]
 script = ExtResource("1_1f0kj")
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1052230111]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-billboard = 1
-texture = ExtResource("2_afpow")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1046747846]
 transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, 0, 0.062402345, 0)

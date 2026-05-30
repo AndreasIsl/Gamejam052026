@@ -9,12 +9,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_m2j2l"]
 
 [node name="RohrbertStanding" unique_id=1021150881 instance=ExtResource("1_32pkf")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("2_m2j2l")
 
-[node name="Sprite3D" parent="." index="0" unique_id=1052230111]
-visible = false
-
-[node name="CollisionShape3D" parent="." index="1" unique_id=1046747846]
+[node name="CollisionShape3D" parent="." index="0" unique_id=1046747846]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.08, 0)
 shape = SubResource("BoxShape3D_iiycu")
 
@@ -22,10 +20,11 @@ shape = SubResource("BoxShape3D_iiycu")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.2, 0)
 shape = SubResource("BoxShape3D_m2j2l")
 
-[node name="Hitbox" parent="." index="3" unique_id=1854293336]
+[node name="Hitbox" parent="." index="2" unique_id=1854293336]
 transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0.1, 0)
 
 [node name="CollisionShape3D" parent="Hitbox" index="0" unique_id=1852526939]
 visible = false
 
-[node name="Gegner" parent="." index="4" unique_id=1682375056 instance=ExtResource("2_iiycu")]
+[node name="RohrbertVisual" parent="." index="3" unique_id=1374439153 instance=ExtResource("2_iiycu")]
+transform = Transform3D(-0.76604444, 0, -0.64278764, 0, 1, 0, 0.64278764, 0, -0.76604444, 0, 0, 0)
