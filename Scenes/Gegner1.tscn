@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ck3kqrvclthtb"]
+
+[ext_resource type="PackedScene" uid="uid://bp5sawhag2ais" path="res://Assets/Enemies/Gegner.fbx" id="1_swt3i"]
+
+[node name="Gegner" unique_id=1682375056 instance=ExtResource("1_swt3i")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1796263255) index="0" unique_id=940002490]
+bones/0/rotation = Quaternion(0.4936979, 0.50622374, -0.50622255, 0.49369898)
+bones/1/rotation = Quaternion(-0.22068098, 0.21522096, 0.68104595, 0.66419595)
+bones/10/rotation = Quaternion(-0.15453558, -0.6900137, 0.17177027, 0.6859263)
+bones/12/position = Vector3(5.1934036e-05, 0.00018415716, 0.005065727)
+bones/12/rotation = Quaternion(0.0061735115, -0.7070798, 0.011538989, 0.70701265)
