@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c8nxtiirxayya" path="res://Scenes/player.tscn" id="1_hi7j2"]
 [ext_resource type="Script" uid="uid://ceg2bakt5qjpk" path="res://Scripts/level_one.gd" id="1_v27vh"]
 [ext_resource type="PackedScene" uid="uid://bhhwrgwjdufa4" path="res://Scenes/Levels/LevelOne/level_one_body.tscn" id="2_ik1yt"]
-[ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/Enemies/TestEnemy.tscn" id="3_b7vm3"]
+[ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/enemies/TestEnemy.tscn" id="3_b7vm3"]
 [ext_resource type="PackedScene" uid="uid://cm1f34m8daoo6" path="res://Scenes/deathzone.tscn" id="4_e1b34"]
 [ext_resource type="PackedScene" uid="uid://bl3tbki8bbqet" path="res://Scenes/Items/Pickups/KeyItem.tscn" id="5_yr8yc"]
 [ext_resource type="PackedScene" uid="uid://cpl8fsfwf7iy6" path="res://Scenes/blockade.tscn" id="6_0uuxj"]
@@ -16,8 +16,6 @@
 script = ExtResource("1_v27vh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1046824262]
-
-[node name="LevelOneBody" parent="." unique_id=1205522974 instance=ExtResource("2_ik1yt")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=65046320]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -58,3 +56,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
 
 [node name="Collectible2" parent="Collectibles" unique_id=1376641800 instance=ExtResource("10_l0njo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 2.5, 0)
+
+[node name="LevelOneBody" parent="." unique_id=800788273 instance=ExtResource("2_ik1yt")]
