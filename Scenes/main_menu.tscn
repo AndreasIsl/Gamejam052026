@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://hdd6mroyjadx"]
+
+[ext_resource type="Script" uid="uid://dmic1jq0ot31j" path="res://Scripts/main_menu.gd" id="1_28flt"]
+
+[sub_resource type="Theme" id="Theme_48xlc"]
+
+[node name="MainMenu" type="Control" unique_id=1341146700]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=36101428]
+layout_mode = 0
+offset_right = 85.0
+offset_bottom = 93.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1235905871]
+layout_mode = 2
+theme = SubResource("Theme_48xlc")
+text = "Get Jaqued"
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=31886754]
+layout_mode = 2
+text = "Play"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=2061944854]
+layout_mode = 2
+text = "Exit"

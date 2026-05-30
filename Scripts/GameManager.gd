@@ -1,16 +1,13 @@
 extends Node
 var levels := [
-	#"res://Scenes/Levels/LevelZero/level_Zero.tscn",
 	"res://Scenes/Levels/LevelOne/level_one.tscn",
 ]
+	#"res://Scenes/Levels/LevelZero/level_Zero.tscn",
 
 var current_level := 0
 var collectible_count := 0
 
 signal collectible_count_changed(new_count: int)
-
-
-
 
 
 func restart_level():
@@ -24,11 +21,14 @@ func _restart_level_deferred():
 func next_level():
 	if current_level + 1 >= levels.size():
 		print("Game finished!")
+		get_tree().change_scene_to_file("res://Scenes/win_screen.tscn")
 		return
-	
+
 	current_level += 1
 	print(current_level)
+	print("current_level %s",current_level)
 	get_tree().change_scene_to_file(levels[current_level])
+	
 
 func _process(_delta):
 	pass
