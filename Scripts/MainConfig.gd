@@ -1,8 +1,10 @@
 extends Node
 
 #Player settings
-var player_speed = 5.0
-var player_jump_velocity = 5
+var player_speed = 4.0
+var player_speed_air = 2
+var player_jump_velocity = 3
+var player_bounce_velocity = 3
 
 
 #Enemy settings
