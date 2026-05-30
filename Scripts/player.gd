@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+var coyote_time  = MainConfig.coyote_time 
 var speed = MainConfig.player_speed
 var speed_air = MainConfig.player_speed_air
 var jump_velocity = MainConfig.player_jump_velocity
@@ -12,7 +12,8 @@ var bounce_velocity = MainConfig.player_bounce_velocity
 var nearby_item: ThrowableItem = null
 var carried_item: ThrowableItem = null
 var facing_direction := Vector3.FORWARD
-
+var coyote_timer := 0.0
+var has_jumped := false
 
 func _ready() -> void:
 	axis_lock_linear_z = true
@@ -24,9 +25,19 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		current_speed = speed_air
+	else:
+		coyote_timer = coyote_time
+		has_jumped = false
 
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	# Coyote Timer runterzählen
+	if not is_on_floor():
+		coyote_timer -= delta
+
+	# Jump
+	if Input.is_action_just_pressed("ui_accept") and coyote_timer > 0.0 and not has_jumped:
 		velocity.y = jump_velocity
+		has_jumped = true
+		coyote_timer = 0.0
 
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

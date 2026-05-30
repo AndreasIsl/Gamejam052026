@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+class_name Enemy
+
+
 var speed = MainConfig.enemy_speed
 var gravity = MainConfig.enemy_gravity
 @export var patrol_distance = MainConfig.patrol_distance
