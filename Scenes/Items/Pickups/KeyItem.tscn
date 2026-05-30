@@ -2,7 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://clhyoj0grqq6f" path="res://Scenes/Items/Pickups/moveable_body.tscn" id="1_cwn4k"]
 [ext_resource type="Script" uid="uid://3jseosp3hcfh" path="res://Scripts/key_item.gd" id="2_d72tg"]
+[ext_resource type="ArrayMesh" uid="uid://wx6wyfk0s5f8" path="res://Assets/Meshes/ArtBlock.obj" id="3_d72tg"]
+[ext_resource type="Texture2D" uid="uid://77e3vf2u6emo" path="res://Assets/ItemAssets/Gustav Klimt Der Kuss.png" id="4_g0lo5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a18v7"]
+albedo_texture = ExtResource("4_g0lo5")
 
 [node name="KeyItemBody" unique_id=1018504437 instance=ExtResource("1_cwn4k")]
 script = ExtResource("2_d72tg")
 item_id = "1"
+
+[node name="Sprite3D" parent="." index="2" unique_id=1342121035]
+texture = null
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3" unique_id=1523706449]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = ExtResource("3_d72tg")
+surface_material_override/0 = SubResource("StandardMaterial3D_a18v7")
