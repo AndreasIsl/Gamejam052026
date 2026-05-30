@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dhabnlhxjoy8"]
+
+[ext_resource type="PackedScene" uid="uid://kwa3rjg4l7yp" path="res://Scenes/Enemies/rohrbert_standing.tscn" id="1_yv6q1"]
+[ext_resource type="Script" uid="uid://chs0jnnim8uxd" path="res://Scripts/rohrbert_running.gd" id="2_u8xr2"]
+
+[node name="RohrbertRunning" unique_id=1021150881 instance=ExtResource("1_yv6q1")]
+script = ExtResource("2_u8xr2")
+
+[node name="RohrbertVisual" parent="." index="3" unique_id=1374439153]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 0, 0, 0)

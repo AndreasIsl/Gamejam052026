@@ -11,8 +11,6 @@ var gravity = MainConfig.enemy_gravity
 var direction := 1
 var start_x := 0.0
 
-@onready var sprite: Sprite3D = $Sprite3D
-
 
 func _ready():
 	start_x = global_position.x
@@ -34,8 +32,6 @@ func _physics_process(delta):
 	elif global_position.x < start_x - patrol_distance:
 		direction = 1
 
-	# Sprite spiegeln
-	sprite.flip_h = direction < 0
 
 	move_and_slide()
 
