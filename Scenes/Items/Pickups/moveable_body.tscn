@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://clhyoj0grqq6f"]
 
 [ext_resource type="Script" uid="uid://2lfwt5hirng3" path="res://Scripts/moveable_body.gd" id="1_aivfu"]
-[ext_resource type="Texture2D" uid="uid://c2s3hupeslbs0" path="res://icon.svg" id="1_ghdyt"]
+[ext_resource type="Texture2D" uid="uid://c2s3hupeslbs0" path="res://Assets/ItemAssets/icon.svg" id="1_ghdyt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aivfu"]
 

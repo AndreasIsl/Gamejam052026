@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c8nxtiirxayya" path="res://Scenes/player.tscn" id="1_hi7j2"]
 [ext_resource type="PackedScene" uid="uid://bhhwrgwjdufa4" path="res://Scenes/Levels/LevelOne/level_one_body.tscn" id="2_ik1yt"]
-[ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/enemy.tscn" id="3_b7vm3"]
+[ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/enemies/TestEnemy.tscn" id="3_b7vm3"]
 [ext_resource type="PackedScene" uid="uid://cm1f34m8daoo6" path="res://Scenes/deathzone.tscn" id="4_e1b34"]
 [ext_resource type="PackedScene" uid="uid://bl3tbki8bbqet" path="res://Scenes/Items/Pickups/KeyItem.tscn" id="5_yr8yc"]
 

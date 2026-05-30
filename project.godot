@@ -13,7 +13,7 @@ config_version=5
 config/name="Gamejam052026"
 run/main_scene="uid://il52e34kredp"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/ItemAssets/icon.svg"
 
 [autoload]
 
