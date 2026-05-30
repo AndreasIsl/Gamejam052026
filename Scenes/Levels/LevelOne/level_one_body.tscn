@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhhwrgwjdufa4"]
 
 [ext_resource type="MeshLibrary" uid="uid://b7cgvv8ukor7s" path="res://Assets/MeshLib/Block1.meshlib" id="1_gl0hn"]
+[ext_resource type="Texture2D" uid="uid://b7lxth6kfhqpn" path="res://Assets/Sprite/4469.jpeg" id="2_e365j"]
 
 [node name="LevelOneBody" type="Node3D" unique_id=800788273]
 
@@ -12,3 +13,8 @@ cell_center_z = false
 data = {
 "cells": PackedInt32Array(65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 65537, 0, 0, 65538, 0, 0, 65540, 0, 1, 65539, 0, 1, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196614, 0, 0, 196616, 0, 0, 262161, 0, 0, 8, 0, 0, 65544, 0, 1, 65541, 0, 1, 6, 0, 0, 65542, 0, 1, 65543, 0, 1, 7, 0, 0, 65545, 0, 0, 5, 0, 0, 4, 0, 0, 131076, 0, 0, 3, 0, 0)
 }
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=388280687]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -34.401, -15.879, -20)
+centered = false
+texture = ExtResource("2_e365j")
