@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://kwa3rjg4l7yp"]
+
+[ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/Enemies/TestEnemy.tscn" id="1_32pkf"]
+[ext_resource type="PackedScene" uid="uid://ck3kqrvclthtb" path="res://Scenes/Enemies/RohrbertVisual.tscn" id="2_iiycu"]
+[ext_resource type="Script" uid="uid://dqdganjja40e3" path="res://Scripts/rohrbert_standing.gd" id="2_m2j2l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iiycu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m2j2l"]
+
+[node name="RohrbertStanding" unique_id=1021150881 instance=ExtResource("1_32pkf")]
+script = ExtResource("2_m2j2l")
+
+[node name="Sprite3D" parent="." index="0" unique_id=1052230111]
+visible = false
+
+[node name="CollisionShape3D" parent="." index="1" unique_id=1046747846]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.08, 0)
+shape = SubResource("BoxShape3D_iiycu")
+
+[node name="CollisionShape3D" parent="HeadArea" parent_id_path=PackedInt32Array(1843530781) index="0" unique_id=1972036800]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.2, 0)
+shape = SubResource("BoxShape3D_m2j2l")
+
+[node name="Hitbox" parent="." index="3" unique_id=1854293336]
+transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0.1, 0)
+
+[node name="CollisionShape3D" parent="Hitbox" index="0" unique_id=1852526939]
+visible = false
+
+[node name="Gegner" parent="." index="4" unique_id=1682375056 instance=ExtResource("2_iiycu")]

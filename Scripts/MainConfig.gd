@@ -1,6 +1,7 @@
 extends Node
 
 #Player settings
+var coyote_time = 0.5
 var player_speed = 4.0
 var player_speed_air = 2
 var player_jump_velocity = 4
