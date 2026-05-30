@@ -15,7 +15,7 @@ func restart_level():
 
 
 func _restart_level_deferred():
-	get_tree().change_scene_to_file(levels[current_level])
+	get_tree().reload_current_scene()
 
 
 func next_level():

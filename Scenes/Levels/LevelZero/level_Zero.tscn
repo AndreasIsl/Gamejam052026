@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c8nxtiirxayya" path="res://Scenes/player.tscn" id="1_fj12h"]
 [ext_resource type="Script" uid="uid://d1cjowul5p4d3" path="res://Scripts/level_zero.gd" id="1_gghvb"]
 [ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/Enemies/TestEnemy.tscn" id="3_3upf7"]
+[ext_resource type="PackedScene" uid="uid://cm1f34m8daoo6" path="res://Scenes/deathzone.tscn" id="4_phgkl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dyf6n"]
 
@@ -33,3 +34,6 @@ shape = SubResource("BoxShape3D_gghvb")
 
 [node name="Enemy2" parent="." unique_id=2121351763 instance=ExtResource("3_3upf7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6648649, 1.2741152, -1.7175024)
+
+[node name="Deathzone" parent="." unique_id=655910940 instance=ExtResource("4_phgkl")]
+transform = Transform3D(16.035, 0, 0, 0, 16.035, 0, 0, 0, 16.035, -0.039, -9.423, 0)
