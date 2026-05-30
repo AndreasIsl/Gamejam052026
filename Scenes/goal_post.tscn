@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://hvwxhdn1k7an"]
+
+[ext_resource type="Script" uid="uid://dgkca3pybddec" path="res://Scripts/goal_post.gd" id="1_fkxfh"]
+[ext_resource type="Texture2D" uid="uid://duxua1t83aqa2" path="res://Assets/placeholder/craftpix-net-563568-free-wraith-tiny-style-2d-sprites/PNG/Wraith_02/Vector Parts/Spells Effect.png" id="2_hfte2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vgsuu"]
+
+[node name="GoalPost" type="Area3D" unique_id=960934025]
+script = ExtResource("1_fkxfh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1602379709]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_vgsuu")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1736063537]
+texture = ExtResource("2_hfte2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -22,7 +22,7 @@ func _restart_level_deferred():
 
 
 func next_level():
-	if current_level >= levels.size():
+	if current_level + 1 >= levels.size():
 		print("Game finished!")
 		return
 	
