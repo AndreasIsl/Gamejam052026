@@ -5,18 +5,15 @@ var levels := [
 ]
 
 var current_level := 0
-var can_check_enemies := false
+var collectible_count := 0
+
+signal collectible_count_changed(new_count: int)
 
 
 
-func start_enemy_check():
-	can_check_enemies = false
-	await get_tree().create_timer(1).timeout
-	can_check_enemies = true
 
 
 func restart_level():
-	can_check_enemies = false
 	call_deferred("_restart_level_deferred")
 
 
@@ -25,7 +22,7 @@ func _restart_level_deferred():
 
 
 func next_level():
-	if current_level >= levels.size():
+	if current_level + 1 >= levels.size():
 		print("Game finished!")
 		return
 	
@@ -34,8 +31,12 @@ func next_level():
 	get_tree().change_scene_to_file(levels[current_level])
 
 func _process(_delta):
-	if not can_check_enemies:
-		return
-	
-	if get_tree().get_nodes_in_group("Enemies").is_empty():
-		next_level()		
+	pass
+		
+func collect_collectible():
+	collectible_count += 1
+	collectible_count_changed.emit(collectible_count)
+
+func reset_collectibles() -> void:
+	collectible_count = 0
+	collectible_count_changed.emit(collectible_count)

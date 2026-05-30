@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://by6xkolimub24"]
+
+[ext_resource type="Texture2D" uid="uid://c88wcvv6haxlt" path="res://Assets/placeholder/craftpix-net-563568-free-wraith-tiny-style-2d-sprites/PNG/Wraith_03/Vector Parts/Spells-Effect.png" id="1_jvtvk"]
+
+[node name="Collectibles" type="HBoxContainer" unique_id=1428016820]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=598075411]
+layout_mode = 2
+texture = ExtResource("1_jvtvk")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=1964065655]
+layout_mode = 2
+text = "x 0"
