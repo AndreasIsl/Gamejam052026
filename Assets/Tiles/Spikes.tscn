@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dbs1ujv8imduk"]
+
+[ext_resource type="ArrayMesh" uid="uid://h0c2ec81petq" path="res://Assets/Meshes/Spike1.obj" id="1_tevi0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a8pte"]
+size = Vector3(0.43579102, 0.44909668, 0.41174316)
+
+[node name="Spikes" type="Node3D" unique_id=312890379]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1568815157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5042912, 0)
+mesh = ExtResource("1_tevi0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=667230585]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=176277799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002319336, -0.28362447, -0.0028686523)
+shape = SubResource("BoxShape3D_a8pte")

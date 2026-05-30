@@ -7,7 +7,7 @@
 [node name="LevelOne" type="Node3D" unique_id=1517544317]
 
 [node name="Player" parent="." unique_id=983142921 instance=ExtResource("1_hi7j2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6816559, 2.2058105, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1046824262]
 

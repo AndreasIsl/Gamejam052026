@@ -1,15 +1,32 @@
 [gd_scene format=3 uid="uid://cb86ep8frjoyp"]
 
-[ext_resource type="ArrayMesh" uid="uid://brcla8yuhxwav" path="res://Assets/Meshes/Block1.obj" id="1_tfn7f"]
+[ext_resource type="ArrayMesh" uid="uid://b6h1cq04v48dv" path="res://Assets/Meshes/Block1.obj" id="1_tfn7f"]
+[ext_resource type="ArrayMesh" uid="uid://h0c2ec81petq" path="res://Assets/Meshes/Spike1.obj" id="2_oxx1q"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_oxx1q"]
-size = Vector3(0.999906, 0.499079, 0.999906)
+[sub_resource type="BoxShape3D" id="BoxShape3D_tfn7f"]
+size = Vector3(0.5222473, 0.24609375, 0.50061035)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aclqo"]
+size = Vector3(0.47485352, 0.46099854, 0.46801758)
 
 [node name="Tile" type="Node3D" unique_id=631626386]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2722558]
 mesh = ExtResource("1_tfn7f")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D" unique_id=805889609]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6998262e-05, -0.24954051, 4.6998262e-05)
-shape = SubResource("BoxShape3D_oxx1q")
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=388324956]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=315495563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0027313232, -0.12841797, -0.00018310547)
+shape = SubResource("BoxShape3D_tfn7f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1191570686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49884033, 0)
+mesh = ExtResource("2_oxx1q")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="MeshInstance3D2" unique_id=650358656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49081248, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D2" unique_id=473979495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00036621094, 0.22183228, -0.0028076172)
+shape = SubResource("BoxShape3D_aclqo")
