@@ -1,5 +1,7 @@
 extends ThrowableItem
 
+@export var item_id := ''
+
 var spawn_transform: Transform3D
 
 func _ready() -> void:
@@ -10,6 +12,10 @@ func _ready() -> void:
 func die() -> void:
 	print("ITEM DIE CALLED")
 	call_deferred("respawn")
+	
+func resolve() -> void:
+	print("ITEM resolve CALLED")
+	call_deferred("queue_free")
 
 func respawn() -> void:
 	# Physik stoppen

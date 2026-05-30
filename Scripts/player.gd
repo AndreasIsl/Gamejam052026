@@ -13,6 +13,11 @@ var nearby_item: ThrowableItem = null
 var carried_item: ThrowableItem = null
 var facing_direction := Vector3.FORWARD
 
+
+func _ready() -> void:
+	axis_lock_linear_z = true
+
+
 func _physics_process(delta: float) -> void:
 	var current_speed = speed
 
@@ -31,10 +36,10 @@ func _physics_process(delta: float) -> void:
 		
 	if direction:
 		velocity.x = direction.x * current_speed
-		velocity.z = direction.z * current_speed
+		#velocity.z = direction.z * current_speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, current_speed)
-		velocity.z = move_toward(velocity.z, 0, current_speed)
+		#velocity.z = move_toward(velocity.z, 0, current_speed)
 
 	move_and_slide()
 	update_animation(input_dir)
@@ -58,11 +63,11 @@ func update_animation(input_dir: Vector2) -> void:
 			animated_sprite.play("walk_left")
 		else:
 			animated_sprite.play("walk_right")
-	else:
-		if input_dir.y < 0:
-			animated_sprite.play("walk_down")
-		else:
-			animated_sprite.play("walk_down")
+	#else:
+		#if input_dir.y < 0:
+			#animated_sprite.play("walk_down")
+		#else:
+			#animated_sprite.play("walk_down")
 	
 func bounce():
 	velocity.y = bounce_velocity

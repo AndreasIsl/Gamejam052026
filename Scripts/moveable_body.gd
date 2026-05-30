@@ -16,6 +16,8 @@ var is_held := false
 func _ready() -> void:
 	original_collision_layer = collision_layer
 	original_collision_mask = collision_mask
+	axis_lock_linear_z = true
+
 
 
 func pickup(carry_point: Node3D) -> void:

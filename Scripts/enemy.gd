@@ -51,4 +51,7 @@ func _on_head_area_area_entered(area: Area3D) -> void:
 		if player.has_method("bounce"):
 			player.bounce()
 
-		call_deferred("queue_free")
+		die()
+
+func die() -> void:
+	call_deferred("queue_free")

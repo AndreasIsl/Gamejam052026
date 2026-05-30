@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bft7r22avdlin"]
+
+[ext_resource type="Script" uid="uid://dy81sxhlkqgly" path="res://Scripts/image_frame.gd" id="1_m2aoc"]
+[ext_resource type="Texture2D" uid="uid://c2s3hupeslbs0" path="res://Assets/ItemAssets/icon.svg" id="1_tgbnu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ioj87"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m2aoc"]
+
+[node name="ImageFrame" type="StaticBody3D" unique_id=729793581]
+script = ExtResource("1_m2aoc")
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=1985330380]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=528720048]
+shape = SubResource("SphereShape3D_ioj87")
+debug_color = Color(0.90543836, 0.00013803899, 0.74831605, 0.41960785)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1224774397]
+shape = SubResource("SphereShape3D_m2aoc")
+disabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1954583929]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+texture = ExtResource("1_tgbnu")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

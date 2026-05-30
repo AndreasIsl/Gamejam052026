@@ -5,3 +5,4 @@
 
 [node name="KeyItemBody" unique_id=1018504437 instance=ExtResource("1_cwn4k")]
 script = ExtResource("2_d72tg")
+item_id = "1"

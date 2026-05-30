@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cpl8fsfwf7iy6"]
+
+[ext_resource type="Script" uid="uid://mai4j6pn3e5w" path="res://Scripts/blockade.gd" id="1_i4mum"]
+[ext_resource type="Texture2D" uid="uid://c2s3hupeslbs0" path="res://Assets/ItemAssets/icon.svg" id="1_po5qt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i4mum"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_36oby"]
+
+[node name="Blockade" type="StaticBody3D" unique_id=50277083 groups=["Blockades"]]
+script = ExtResource("1_i4mum")
+key_id = "1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=870945769]
+shape = SubResource("BoxShape3D_i4mum")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=340029188]
+texture = ExtResource("1_po5qt")
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=1660686910 groups=["Blockades"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=580603870]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_36oby")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
