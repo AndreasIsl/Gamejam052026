@@ -150,3 +150,6 @@ far = 74.84
 transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.2, 0, -0.275, 0)
 shape = SubResource("CylinderShape3D_cvnsp")
 debug_color = Color(0.9403242, 1.0781288e-05, 0.617683, 0.41960785)
+
+[node name="CarryNode" type="Node3D" parent="." unique_id=1455579137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)

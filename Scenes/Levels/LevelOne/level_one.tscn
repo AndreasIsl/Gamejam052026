@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bhhwrgwjdufa4" path="res://Scenes/Levels/LevelOne/level_one_body.tscn" id="2_ik1yt"]
 [ext_resource type="PackedScene" uid="uid://cao8ejt4cd8y4" path="res://Scenes/enemy.tscn" id="3_b7vm3"]
 [ext_resource type="PackedScene" uid="uid://cm1f34m8daoo6" path="res://Scenes/deathzone.tscn" id="4_e1b34"]
+[ext_resource type="PackedScene" uid="uid://bl3tbki8bbqet" path="res://Scenes/Items/Pickups/KeyItem.tscn" id="5_yr8yc"]
 
 [node name="LevelOne" type="Node3D" unique_id=1517544317]
 
@@ -20,8 +21,13 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 [node name="Enemy" parent="." unique_id=1021150881 instance=ExtResource("3_b7vm3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.462019, 1.1208022, 0.027697325)
 
-[node name="Deathzone_ground" parent="." unique_id=655910940 instance=ExtResource("4_e1b34")]
+[node name="Deathzones" type="Node3D" parent="." unique_id=1311531475]
+
+[node name="Deathzone2" parent="Deathzones" unique_id=1918166789 instance=ExtResource("4_e1b34")]
+transform = Transform3D(3.1, 0, 0, 0, 0.517, 0, 0, 0, 0.517, 3.4, 0.45, 0)
+
+[node name="Deathzone_ground" parent="Deathzones" unique_id=655910940 instance=ExtResource("4_e1b34")]
 transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 30, 0, -3, 0)
 
-[node name="Deathzone2" parent="." unique_id=1918166789 instance=ExtResource("4_e1b34")]
-transform = Transform3D(3, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5, 0.45, 0)
+[node name="KeyItemBody" parent="." unique_id=1018504437 instance=ExtResource("5_yr8yc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

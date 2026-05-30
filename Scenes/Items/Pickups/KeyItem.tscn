@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bl3tbki8bbqet"]
+
+[ext_resource type="PackedScene" uid="uid://clhyoj0grqq6f" path="res://Scenes/Items/Pickups/moveable_body.tscn" id="1_cwn4k"]
+[ext_resource type="Script" uid="uid://3jseosp3hcfh" path="res://Scripts/key_item.gd" id="2_d72tg"]
+
+[node name="KeyItemBody" unique_id=1018504437 instance=ExtResource("1_cwn4k")]
+script = ExtResource("2_d72tg")

@@ -13,5 +13,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	print("Hitbox: %s" % body.name)
+	print("Has die:", body.has_method("die"))
 	if body.has_method("die"):
 		body.die()

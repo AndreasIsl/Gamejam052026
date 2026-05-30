@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://clhyoj0grqq6f"]
+
+[ext_resource type="Script" uid="uid://2lfwt5hirng3" path="res://Scripts/moveable_body.gd" id="1_aivfu"]
+[ext_resource type="Texture2D" uid="uid://c2s3hupeslbs0" path="res://icon.svg" id="1_ghdyt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aivfu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sdxg4"]
+
+[node name="MoveableBody" type="RigidBody3D" unique_id=1018504437]
+script = ExtResource("1_aivfu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=694170201]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("BoxShape3D_aivfu")
+
+[node name="PickupRange" type="Area3D" parent="." unique_id=198039503]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PickupRange" unique_id=172176264]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_sdxg4")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1342121035]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+billboard = 2
+texture = ExtResource("1_ghdyt")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="body_entered" from="PickupRange" to="." method="_on_pickup_range_body_entered"]
+[connection signal="body_exited" from="PickupRange" to="." method="_on_pickup_range_body_exited"]
