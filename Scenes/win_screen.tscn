@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cxffa26qgrvu1"]
+
+[ext_resource type="Script" uid="uid://gy7uxkjdu0na" path="res://Scripts/win_screen.gd" id="1_l5sol"]
+
+[node name="WinScreen" type="Control" unique_id=109547270]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l5sol")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1637340144]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=435053438]
+layout_mode = 2
+text = "You Jaqued succesfully"
+
+[node name="ReturnButton" type="Button" parent="VBoxContainer" unique_id=102659066]
+layout_mode = 2
+text = "Return to Main Menu"
